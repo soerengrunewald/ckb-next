@@ -887,7 +887,7 @@ static QHash<QString, Key> getMap(KeyMap::Model model, KeyMap::Layout layout){
         map["volup"].x += 10;
         map["voldn"].x += 10;
 
-        map["logo"] = {nullptr, "Logo", "logo", 128, 0, NS, true, false};
+        map["topbar1"] = {nullptr, "Logo", "topbar1", 128, 0, NS, true, false};
         map.remove("m3");
         map.remove("g11");
 
