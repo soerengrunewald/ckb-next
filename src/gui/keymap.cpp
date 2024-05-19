@@ -869,7 +869,8 @@ static QHash<QString, Key> getMap(KeyMap::Model model, KeyMap::Layout layout){
         map["voldn"].x -= 10;
         break;
     }
-    case KeyMap::K70_PRO:{
+    case KeyMap::K70_PRO:
+    case KeyMap::K70_PRO_RGB:{
         // Same as K70 MK2 but right Windows key is a function key
         map = getMap(KeyMap::K70MK2, layout);
 
@@ -1670,6 +1671,8 @@ KeyMap::Model KeyMap::getModel(const QString& name){
         return K65_MINI;
     if(lower == "k70pro")
         return K70_PRO;
+    if(lower == "k70rgbpro")
+        return K70_PRO_RGB;
     return NO_MODEL;
 }
 
@@ -1755,6 +1758,8 @@ QString KeyMap::getModel(KeyMap::Model model){
         return "k65_mini";
     case K70_PRO:
         return "k70pro";
+    case K70_PRO_RGB:
+        return "k70rgbpro";
     default:
         return "";
     }
@@ -1787,6 +1792,7 @@ int KeyMap::modelWidth(Model model){
     case K70:
     case K70MK2:
     case K70_PRO:
+    case K70_PRO_RGB:
         return K70_WIDTH;
     case K95:
     case K95L:
@@ -1841,6 +1847,7 @@ int KeyMap::modelHeight(Model model){
     case K70:
     case K70MK2:
     case K70_PRO:
+    case K70_PRO_RGB:
     case K70_TKL:
     case K95:
     case K95L:

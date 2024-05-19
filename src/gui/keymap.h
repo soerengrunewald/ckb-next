@@ -92,6 +92,7 @@ public:
         K65_MINI,
         K70_TKL,
         K70_PRO,
+        K70_PRO_RGB,
         _MODEL_MAX
     };
     // Key layouts (ordered alphabetically by name)
